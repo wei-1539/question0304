@@ -71,7 +71,7 @@ export default {
         .then((res) => {
           const { token, expired } = res.data
           document.cookie = `hexSchool = ${token};expires = ${new Date(expired)}; path=/`
-          // this.isLoading = false
+          this.loginToken = token
           this.$router.push('/admin/product')
         })
         .catch((err) => {
@@ -84,7 +84,17 @@ export default {
         .finally(() => {
           this.isLoading = false
         })
+    },
+    check () {
+      // 取出token
+      const checkToken = document.cookie.replace(/(?:(?:^|.*;\s*)hexSchool\s*=\s*([^;]*).*$)|^.*$/, '$1')
+      if (checkToken !== '') {
+        this.$router.push('/')
+      }
     }
+  },
+  created () {
+    this.check()
   }
 }
 </script>
