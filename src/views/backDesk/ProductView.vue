@@ -104,7 +104,7 @@ export default {
       // 分頁
       pagination: {},
       // loadingd控制
-      isLoading: false,
+      isLoading: true,
       currentPage: 1
     }
   },

@@ -73,7 +73,7 @@ export default {
             title: '登出成功',
             content: res.data.message
           })
-          document.cookie = 'hexToken=; expires=; path=/'
+          document.cookie = 'hexSchool=; expires=; path=/'
           this.$router.push('/login')
         })
         .catch((err) => {

@@ -62,16 +62,7 @@ export default {
       user: {}
     }
   },
-  created () {
-    this.closeLoading()
-  },
   methods: {
-    closeLoading () {
-      this.isLoading = true
-      setTimeout(() => {
-        this.isLoading = false
-      }, 1000)
-    },
     ...mapActions(useToastMessageStore, ['pushMessage']),
     login () {
       const api = `${VITE_URL}admin/signin`
