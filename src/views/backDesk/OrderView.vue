@@ -1,5 +1,4 @@
 <template>
-  <LoadingComponent :loadingStatus="isLoading"/>
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
       <h2 class="my-4 fw-bold">訂單明細</h2>
@@ -62,6 +61,7 @@
     <OrderModal :order="tempOrder" @update-paid="updateOrder" ref="orderModal"/>
     <DelModal :out-item="tempOrder" @remove-data="delOder" ref="delModal"/>
     <PagePagination :pages="pagination" @emit-pages="getOrder"/>
+    <LoadingComponent v-model:active="isLoading"/>
   </div>
 </template>
 

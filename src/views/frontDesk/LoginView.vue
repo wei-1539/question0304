@@ -37,7 +37,7 @@
       </div>
       <p class="mt-5 mb-3 text-light">&copy; 2021~∞ - 六角學院</p>
     </div>
-    <LoadingComponent :loadingStatus="isLoading"/>
+    <LoadingComponent v-model:active="isLoading"/>
     <ToastMessages/>
 </template>
 

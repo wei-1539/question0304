@@ -1,5 +1,4 @@
 <template>
-  <LoadingComponent :loadingStatus="isLoading"/>
   <div class="container">
     <div class="d-flex justify-content-between align-items-center">
       <h2 class="my-4 fw-bold">優惠卷</h2>
@@ -49,6 +48,7 @@
   </div>
   <CouponModal :coupon="tempCoupon" :is-new="isNew"  @update-coupon="updateCoupon" ref="couponModal"/>
   <DelModal :out-item="tempCoupon" @remove-data="delCoupon" ref="delCoupon"/>
+  <LoadingComponent v-model:active="isLoading"/>
 </template>
 
 <script>

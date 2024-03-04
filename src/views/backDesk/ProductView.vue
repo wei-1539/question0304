@@ -68,7 +68,7 @@
     <!-- 分頁元件 Ｅ -->
     <ProductModal :product="tempProduct" :is-new="isNew" @update-product="updateData"  ref="productModal" />
     <DelModal :out-item="tempProduct" @remove-data="removeData" ref="delModal"/>
-    <LoadingComponent :loadingStatus="isLoading"/>
+    <LoadingComponent v-model:active="isLoading"/>
   </div>
 </template>
 
